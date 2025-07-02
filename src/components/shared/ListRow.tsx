@@ -18,7 +18,7 @@ export default function ListRow({
   onClick,
 }: ListRowProps) {
   return (
-    <Flex as="li" css={ListRowContainerStyles} onClick={onClick}>
+    <Flex as="li" css={ListRowContainerStyles} onClick={onClick} align="center">
       <Flex css={ListRowLeftStyles}>{left}</Flex>
       <Flex css={ListRowContentsStyle}>{contents}</Flex>
       <Flex>{right}</Flex>

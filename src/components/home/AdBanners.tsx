@@ -24,7 +24,7 @@ export default function AdBanners() {
       >
         {data?.map((banner) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={banner.id}>
               <Link to={banner.link}>
                 <Flex direction="column" css={bannerContainerStyles}>
                   <Text bold={true}>{banner.title}</Text>
