@@ -148,4 +148,13 @@ export default css`
     color: inherit;
     text-decoration: inherit;
   }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root {
+    width: 100%;
+    max-width: 480px;
+  }
 `
