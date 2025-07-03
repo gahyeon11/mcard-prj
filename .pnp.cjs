@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:27.5.2"],\
           ["@types/lodash", "npm:4.17.19"],\
           ["@types/node", "npm:16.18.126"],\
+          ["@types/qs", "npm:6.14.0"],\
           ["@types/react", "npm:19.1.8"],\
           ["@types/react-dom", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:19.1.6"],\
           ["@types/validator", "npm:13.15.2"],\
@@ -54,6 +55,7 @@ const RAW_RUNTIME_STATE =
           ["lodash", "npm:4.17.21"],\
           ["mcard-prj", "workspace:."],\
           ["prettier", "npm:3.6.1"],\
+          ["qs", "npm:6.14.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:18.2.0"],\
           ["react-infinite-scroll-component", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:6.1.0"],\
@@ -14098,6 +14100,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:27.5.2"],\
           ["@types/lodash", "npm:4.17.19"],\
           ["@types/node", "npm:16.18.126"],\
+          ["@types/qs", "npm:6.14.0"],\
           ["@types/react", "npm:19.1.8"],\
           ["@types/react-dom", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:19.1.6"],\
           ["@types/validator", "npm:13.15.2"],\
@@ -14112,6 +14115,7 @@ const RAW_RUNTIME_STATE =
           ["lodash", "npm:4.17.21"],\
           ["mcard-prj", "workspace:."],\
           ["prettier", "npm:3.6.1"],\
+          ["qs", "npm:6.14.0"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:18.2.0"],\
           ["react-infinite-scroll-component", "virtual:a08748de265a5027e2af7a5e59ecb4cfdbc4773aaca2cf7282ae74d5978f758689acc2de97cd666728239d7192e10bb9c3d99eba80de94709804d15009e3a764#npm:6.1.0"],\
@@ -17123,6 +17127,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../Users/keh56/AppData/Local/Yarn/Berry/cache/qs-npm-6.13.0-53676ddc84-10c0.zip/node_modules/qs/",\
         "packageDependencies": [\
           ["qs", "npm:6.13.0"],\
+          ["side-channel", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.14.0", {\
+        "packageLocation": "../../Users/keh56/AppData/Local/Yarn/Berry/cache/qs-npm-6.14.0-6b298311eb-10c0.zip/node_modules/qs/",\
+        "packageDependencies": [\
+          ["qs", "npm:6.14.0"],\
           ["side-channel", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
