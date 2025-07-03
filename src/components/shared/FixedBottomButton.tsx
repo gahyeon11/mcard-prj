@@ -8,11 +8,13 @@ import { motion } from 'framer-motion'
 interface FixedBottomButton {
   label: string
   onClick: () => void
+  disabled?: boolean
 }
 
 export default function FixedBottomButton({
   label,
   onClick,
+  disabled,
 }: FixedBottomButton) {
   const $portalRoot = document.getElementById('root-portal')
 
@@ -29,7 +31,13 @@ export default function FixedBottomButton({
       }}
     >
       <ContentWrapper>
-        <Button size="medium" full={true} onClick={onClick} css={buttonStyle}>
+        <Button
+          size="medium"
+          full={true}
+          onClick={onClick}
+          css={buttonStyle}
+          disabled={disabled}
+        >
           {label}
         </Button>
       </ContentWrapper>
