@@ -157,4 +157,9 @@ export default css`
     width: 100%;
     max-width: 480px;
   }
+  /* #root-portal {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  } */
 `

@@ -1,8 +1,9 @@
 import { colors } from '@/styles/colorPalette'
-import { css, keyframes } from '@emotion/react'
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { createPortal } from 'react-dom'
 import Button from './Button'
+import { motion } from 'framer-motion'
 
 interface FixedBottomButton {
   label: string
@@ -19,33 +20,39 @@ export default function FixedBottomButton({
     return null
   }
   return createPortal(
-    <Container>
-      <Button size="medium" full={true} onClick={onClick} css={buttonStyle}>
-        {label}
-      </Button>
-    </Container>,
+    <MotionContainer
+      initial={{ opacity: 0, translateY: 90 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{
+        duration: 1.0,
+        ease: 'easeInOut',
+      }}
+    >
+      <ContentWrapper>
+        <Button size="medium" full={true} onClick={onClick} css={buttonStyle}>
+          {label}
+        </Button>
+      </ContentWrapper>
+    </MotionContainer>,
     $portalRoot,
   )
 }
 
-const slideUp = keyframes`
-  to{
-    transform: translateY(0)
-  }
-`
-
-const Container = styled.div`
-  width: 100%;
-  max-width: 480px;
+const MotionContainer = styled(motion.div)`
   position: fixed;
-  bottom: 0;
   left: 0;
-  transform: translateX(-50%);
+  right: 0;
+  bottom: 0;
   background-color: ${colors.white};
   padding: 20px 10px 8px;
-  transform: translateY(100%);
-  animation: ${slideUp} 0.5s ease-in-out forwards;
 `
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+`
+
 const buttonStyle = css`
   border-radius: 8px;
 `
