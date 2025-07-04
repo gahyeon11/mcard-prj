@@ -11,6 +11,8 @@ import { motion } from 'framer-motion'
 import { useCallback } from 'react'
 import useUser from '@/hooks/auth/useUser'
 import { useAlertContext } from '@/context/AlertContext'
+import Review from '@/components/card/Review'
+import { Spacing } from '@/components/shared/Spacing'
 
 export default function CardPage() {
   const navigate = useNavigate()
