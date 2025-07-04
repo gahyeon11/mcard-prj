@@ -5,6 +5,7 @@ import { css } from '@emotion/react'
 import { signOut } from 'firebase/auth'
 import { useCallback } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import MyImage from '../my/MyImage'
 import Button from './Button'
 import Flex from './Flex'
 
@@ -13,12 +14,14 @@ export default function Navbar() {
   const showSignButton =
     ['/signup', '/signin'].includes(location.pathname) === false
   const user = useUser()
-  const handleLogout = useCallback(() => {
-    signOut(auth)
-  }, [])
+
   const renderButton = useCallback(() => {
     if (user != null) {
-      return <Button onClick={handleLogout}>로그아웃</Button>
+      return (
+        <Link to="/my">
+          <MyImage size={30} />
+        </Link>
+      )
     }
     if (showSignButton) {
       return (
@@ -28,10 +31,11 @@ export default function Navbar() {
       )
     }
     return null
-  }, [user, showSignButton, handleLogout])
+  }, [user, showSignButton])
 
   return (
     <Flex css={navbarContainerStyles} justify="space-between" align="center">
+      {/* TODO: 로고 변경 */}
       <Link to="/">홈</Link>
       {renderButton()}
     </Flex>
