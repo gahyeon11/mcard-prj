@@ -76,7 +76,9 @@ export default function CardPage() {
       {promotion != null ? (
         <Flex direction="column" css={termsContainerStyles}>
           <Text bold={true}>유의사항</Text>
-          <Text typography="t7">{removeHtmlTags(promotion.terms)}</Text>
+          <Text typography="t7">
+            {removeHtmlTags(promotion.terms.repeat(1000))}
+          </Text>
         </Flex>
       ) : null}
 
@@ -91,21 +93,7 @@ const termsContainerStyles = css`
 `
 
 function removeHtmlTags(text: string) {
-  let output = ''
-
-  for (let i = 0; i < text.length; i += 1) {
-    if (text[i] == '<') {
-      for (let j = i + 1; j < text.length; j += 1) {
-        if (text[j] == '>') {
-          i = j
-          break
-        }
-      }
-    } else {
-      output += text[i]
-    }
-  }
-  return output
+  return text.replace(/<\/?[^>]+(>|$)/g, '')
 }
 
 function IconCheck() {
