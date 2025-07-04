@@ -33,6 +33,7 @@ export default function ListRow({
 
 const ListRowContainerStyles = css`
   padding: 8px 24px;
+  cursor: pointer;
 `
 const ListRowLeftStyles = css`
   margin-right: 14px;

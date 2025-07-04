@@ -35,8 +35,13 @@ export default function Navbar() {
 
   return (
     <Flex css={navbarContainerStyles} justify="space-between" align="center">
-      {/* TODO: 로고 변경 */}
-      <Link to="/">홈</Link>
+      <Link to="/">
+        <img
+          src="https://cdn0.iconfinder.com/data/icons/investing-and-finance-1/240/credit_card-128.png"
+          alt="card"
+          width={38}
+        />
+      </Link>
       {renderButton()}
     </Flex>
   )

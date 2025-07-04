@@ -44,15 +44,18 @@ export default function CardPage() {
 
   const { name, corpName, promotion, tags, benefit } = data
 
-  const subTitle =
-    promotion != null ? removeHtmlTags(promotion.title) : tags.join(', ')
+  const subTitle = promotion
+    ? removeHtmlTags(promotion.title)
+    : Array.isArray(tags)
+      ? tags.join(', ')
+      : ''
 
   return (
     <div>
       <Top title={`${corpName} ${name}`} subTitle={`${subTitle}`} />
 
       <ul>
-        {benefit.map((text, index) => {
+        {(benefit ?? []).map((text, index) => {
           return (
             <motion.li
               initial={{ opacity: 0, translateX: -90 }}
@@ -78,9 +81,7 @@ export default function CardPage() {
       {promotion != null ? (
         <Flex direction="column" css={termsContainerStyles}>
           <Text bold={true}>유의사항</Text>
-          <Text typography="t7">
-            {removeHtmlTags(promotion.terms.repeat(10))}
-          </Text>
+          <Text typography="t7">{removeHtmlTags(promotion.terms)}</Text>
         </Flex>
       ) : null}
 
