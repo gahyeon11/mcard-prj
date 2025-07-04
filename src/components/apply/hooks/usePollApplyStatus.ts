@@ -29,7 +29,7 @@ export default function usePollApplyStatus({
 
 function getApplySatas() {
   const values = [
-    APPLY_STATUS.REDAY,
+    APPLY_STATUS.READY,
     APPLY_STATUS.REJECT,
     APPLY_STATUS.PROGRESS,
     APPLY_STATUS.COMPLETE,

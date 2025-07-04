@@ -77,12 +77,15 @@ export default function CardPage() {
         <Flex direction="column" css={termsContainerStyles}>
           <Text bold={true}>유의사항</Text>
           <Text typography="t7">
-            {removeHtmlTags(promotion.terms.repeat(1000))}
+            {removeHtmlTags(promotion.terms.repeat(10))}
           </Text>
         </Flex>
       ) : null}
 
-      <FixedBottomButton label="신청하기" onClick={moveToApply} />
+      <FixedBottomButton
+        label="1분만에 신청하고 혜택받기"
+        onClick={moveToApply}
+      />
     </div>
   )
 }

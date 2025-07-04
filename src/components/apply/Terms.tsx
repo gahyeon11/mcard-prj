@@ -3,6 +3,7 @@ import { ApplyValues } from '@/models/apply'
 import { MouseEvent, useCallback, useState } from 'react'
 import Agreement from '../shared/Agreement'
 import FixedBottomButton from '../shared/FixedBottomButton'
+import { Spacing } from '../shared/Spacing'
 
 export default function Terms({
   onNext,
@@ -47,20 +48,24 @@ export default function Terms({
         >
           약관에 모두 동의
         </Agreement.Title>
+        <Spacing size={10} />
         {약관목록.map(({ id, title, link }) => (
-          <Agreement.Discription
-            key={id}
-            link={link}
-            checked={termsAgreements[id]}
-            onChange={(_, checked) => {
-              setTermsAgreements((prevTerms) => ({
-                ...prevTerms,
-                [id]: checked,
-              }))
-            }}
-          >
-            {title}
-          </Agreement.Discription>
+          <>
+            <Agreement.Discription
+              key={id}
+              link={link}
+              checked={termsAgreements[id]}
+              onChange={(_, checked) => {
+                setTermsAgreements((prevTerms) => ({
+                  ...prevTerms,
+                  [id]: checked,
+                }))
+              }}
+            >
+              {title}
+            </Agreement.Discription>
+            <Spacing size={10} />
+          </>
         ))}
       </Agreement>
       <FixedBottomButton

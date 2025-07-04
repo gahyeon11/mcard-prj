@@ -3,6 +3,7 @@ import { ApplyValues } from '@/models/apply'
 import { ChangeEvent, useCallback, useState } from 'react'
 import FixedBottomButton from '../shared/FixedBottomButton'
 import Select from '../shared/Select'
+import { Spacing } from '../shared/Spacing'
 
 type InfoValues = Pick<ApplyValues, 'salary' | 'creditScore' | 'payDate'>
 
@@ -36,6 +37,7 @@ export default function BasicInfo({
         onChange={handleInfoChange}
         name="salary"
       />
+      <Spacing size={20} />
       <Select
         label="신용정보"
         options={신용점수옵션}
@@ -44,6 +46,8 @@ export default function BasicInfo({
         onChange={handleInfoChange}
         name="creditScore"
       />
+      <Spacing size={20} />
+
       <Select
         label="결제일"
         options={결제일옵션}
