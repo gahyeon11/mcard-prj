@@ -13,8 +13,18 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 export default function AdBanners() {
-  const { data } = useQuery(['adBanners'], () => getAdBanners())
+  const { data, isLoading } = useQuery(['adBanners'], () => getAdBanners())
 
+  if (data === null || isLoading) {
+    return (
+      <Container css={swiperPaginationStyles}>
+        <Flex direction="column" css={bannerContainerStyles}>
+          <Text bold={true}>..</Text>
+          <Text typography="t7">..</Text>
+        </Flex>
+      </Container>
+    )
+  }
   return (
     <Container css={swiperPaginationStyles}>
       <Swiper

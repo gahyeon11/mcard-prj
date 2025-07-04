@@ -66,7 +66,7 @@ export default function CardPage() {
                 key={text}
                 left={<IconCheck />}
                 contents={
-                  <ListRow.Texts title={`혜탯 ${index + 1}`} subTitle={text} />
+                  <ListRow.Texts title={`혜택 ${index + 1}`} subTitle={text} />
                 }
               />
             </motion.li>
