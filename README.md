@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+🔨 기술 스택
+React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TypeScript
 
-## Available Scripts
+Emotion (CSS-in-JS)
 
-In the project directory, you can run:
+React Router DOM
 
-### `yarn start`
+Axios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+React Query (데이터 관리)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Firebase Authentication (회원가입/로그인)
 
-### `yarn test`
+Firebase Firestore (카드 신청 데이터 저장)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+json-server (Mock API: 카드 목록, 배너 데이터 등)
 
-### `yarn build`
+DevOps / Deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Vercel (프론트엔드 배포)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Firebase Hosting / Firestore Database 관리
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📱 주요 기능
+✅ 공통
+회원가입 및 로그인 (Firebase Authentication)
 
-### `yarn eject`
+로그인 상태 유지 및 보호 라우팅
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+전역 에러 핸들링 및 로딩 처리
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+반응형 UI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+🏠 메인 페이지
+카드 추천 배너 (Swiper 슬라이드)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+카드 목록 조회 및 상세 페이지 이동
 
-## Learn More
+검색 및 필터 기능 (예: 연회비, 혜택별 필터)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+💳 카드 상세 페이지
+카드 이미지 및 상세 설명 표시
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+카드 혜택/조건 정보 확인
+
+카드 신청 버튼
+
+📝 카드 신청
+카드 신청 폼 입력 및 제출
+
+신청 완료 후 확인 페이지 표시
+
+Firestore에 카드 신청 데이터 저장
+
+🔍 마이페이지
+내가 신청한 카드 목록 조회
+
+신청 내역 삭제
+
+🗂️ 폴더 구조
+```
+src/
+├── api/               # API 호출 함수
+├── components/        # 재사용 가능한 컴포넌트
+├── features/          # 카드, 사용자 관련 비즈니스 로직
+├── hooks/             # 커스텀 훅
+├── pages/             # 각 페이지 컴포넌트
+├── styles/            # 스타일 파일
+└── utils/             # 유틸리티 함수
+```
+🛡️ 프로젝트 목적 및 회고
+이 프로젝트는 카드사 사이트의 기본적인 서비스 구조를 이해하고, 실제 사용자 플로우 기반으로 프론트엔드 기능을 개발하기 위한 학습 목적으로 제작하였습니다. 실제 카드사 사이트처럼 API 연동, 로그인 인증, 데이터 관리 등 서비스를 구성하는 핵심 요소들을 직접 구현하며 클라이언트 사이드 개발 역량을 키웠습니다.
+
+배너 캐러셀, 카드 상세 페이지 UI 등 사용자 친화적 디자인 구현
+
+Firebase 기반 로그인 및 데이터베이스 실습
+
+React Query를 통한 상태 관리 및 API 캐싱 최적화
+
+에러 및 로딩 핸들링을 통한 사용자 경험 개선
+
